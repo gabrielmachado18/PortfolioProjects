@@ -43,12 +43,6 @@ WHERE continent IS NULL
 GROUP BY location, population
 ORDER BY 4 DESC
 
---SELECT continent, MAX(CONVERT(float, total_deaths)) AS Maior_Número_Mortes, MAX(CONVERT(float, total_deaths) / CONVERT(float, population)) * 100 AS Taxa_Mortalidade_População
---FROM PortfolioProject..CovidDeaths
---WHERE continent IS NOT NULL
---GROUP BY continent
---ORDER BY 3 DESC
-
 -- População Total x Vacinações (Aqui, uniremos as duas tabela por 'Location' e 'Date')
 
 SELECT d.continent, d.location, d.date, d.population, v.new_vaccinations
