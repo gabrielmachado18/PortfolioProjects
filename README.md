@@ -1,28 +1,58 @@
-# PortfolioProjects
-Hi there!
+# Projetos de Portfólio usando SQL
 
-That's my first porfolio project.
+Olá, espero que esteja bem :D
 
-**Project Description: COVID-19 Data Analysis**
+Esses são os meus projetos de portfólio usando SQL para Exploração e Limpeza de Dados.
 
-This project uses SQL to analyze COVID-19 data, focusing on cases, deaths, and vaccinations. Here's a simplified breakdown:
+**Descrição do Projeto 1: Análise de Dados da COVID-19**
 
-1. **Data Selection:** We start by picking relevant data like location, date, cases, deaths, and population.
+Este projeto tem como objetivo fornecer insights sobre o impacto da COVID-19 em escala global, ajudando a compreender melhor a progressão da pandemia e os esforços de vacinação.
 
-2. **Brazil's Mortality Rate:** We calculate how deadly COVID-19 is in Brazil by finding the percentage of deaths among total cases.
+Este projeto utiliza SQL para analisar dados da COVID-19, com foco em casos, mortes e vacinações. Aqui está uma descrição simplificada:
 
-3. **Infection Rate in Brazil:** We figure out what percentage of Brazil's population has been infected.
+1. **Seleção de Dados:** Começamos selecionando dados relevantes, como localização, data, casos, mortes e população.
 
-4. **Global Insights:** We look at countries with the highest infection rates and countries with the highest death rates compared to their populations.
+2. **Taxa de Mortalidade no Brasil:** Calculamos o quão letal a COVID-19 é no Brasil, encontrando a porcentagem de mortes entre o total de casos.
 
-5. **Continental Analysis:** We also examine continents with high death rates compared to their populations.
+3. **Taxa de Infecção no Brasil:** Descobrimos qual porcentagem da população brasileira foi infectada.
 
-6. **Vaccination Data:** We integrate vaccination data to see how many people are getting vaccinated over time.
+4. **Percepções Globais:** Analisamos os países com as maiores taxas de infecção e os países com as maiores taxas de morte em relação às suas populações.
 
-7. **Cumulative Vaccination Counts:** We track the total number of vaccinations given, helping us understand the progress of vaccination efforts.
+5. **Análise por Continente:** Também examinamos continentes com altas taxas de morte em relação às suas populações.
 
-8. **Data Organization:** We use techniques like Common Table Expressions (CTEs) and temporary tables for efficient data processing.
+6. **Dados de Vacinação:** Integrados dados de vacinação para ver quantas pessoas estão sendo vacinadas ao longo do tempo.
 
-9. **Creating Views:** We create views to simplify data visualization using tools like PowerBI or Tableau.
+7. **Contagem Cumulativa de Vacinação:** Acompanhamos o número total de vacinações administradas, ajudando a entender o progresso dos esforços de vacinação.
 
-This project aims to provide insights into COVID-19's impact on a global scale, helping us better understand the pandemic's progression and vaccination efforts.
+8. **Organização de Dados:** Utilizamos técnicas como Expressões Comuns de Tabela (CTEs) e tabelas temporárias para processamento eficiente de dados.
+
+9. **Criação de Visualizações:** Criamos visualizações para simplificar a visualização de dados usando ferramentas como PowerBI ou Tableau.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Descrição do Projeto 2: Extração e Limpeza de Dados - Endereços Residenciais de Nashville,TE**
+
+Esse projeto tem como objetivo demonstrar recursos essenciais voltados para extração e principalmente limpeza de dados, tornando a estrutura de dados mais limpa e consistente, pronta para análises posteriores ou integração com outras fontes de dados.
+
+O projeto usa como fonte uma planilha do Excel, tratada em SQL, com as seguintes análises:
+
+**Padronização da coluna de Datas:** Alteração da coluna "SaleDate" para o tipo de dados "Date" para garantir consistência nas datas.
+
+**Correção de Endereços Nulos:** Identificação e correção de endereços nulos na coluna "PropertyAddress" usando o mesmo "ParcelID" para correspondência.
+
+**Separando Colunas de Localização:** Divisão das colunas "PropertyAddress" e "OwnerAddress" em colunas separadas de "Endereço", "Cidade" e "Estado" para facilitar a análise.
+
+**Normalização de Valores Booleanos:** Transformação de valores booleanos ("Y" e "N") na coluna "SoldAsVacant" para "Yes" e "No" utilizando a cláusula "CASE".
+
+**Identificação de Linhas Duplicadas:** Uso de "Common Table Expressions (CTE)" em conjunto com "Window Functions" e "ROW_NUMBER" para identificar e marcar linhas duplicadas.
+
+**Remoção de Linhas Duplicadas:** Remoção das linhas duplicadas com um valor de "ROW_NUMBER" superior a 1, garantindo que apenas uma instância de cada conjunto de dados seja mantida.
+
+**Remoção de Colunas Não Utilizadas:** Exclusão de colunas desnecessárias, como "OwnerAddress", "TaxDistrict", "PropertyAddress", e "SaleDate", para simplificar o conjunto de dados.
+
+**Uso de Funções SQL - SUBSTRING e CHARINDEX:** Demonstração do uso das funções SQL "SUBSTRING" e "CHARINDEX" para extrair partes específicas de uma coluna de texto.
+
+**Uso de Funções SQL - PARSENAME e REPLACE:** Demonstração do uso das funções SQL "PARSENAME" e "REPLACE" para manipular e dividir colunas que contêm dados estruturados.
+
+**Uso de Cláusula UPDATE para Atualizações:** Utilização da cláusula "UPDATE" para realizar atualizações nas colunas do banco de dados com base em regras e correspondências definidas.
+
